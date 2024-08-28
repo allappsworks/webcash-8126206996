@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;1,900&display=swap');
+
+  body {
+        font-family: 'Poppins', sans-serif;
+        font-weight: bold;
+    background: #14223C;
+    width: 96%;
+    color: #000;
+    margin-top: 7px;
+  }
+          .container {
+                    font-weight: bold;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .box {
+            width: 30%;
+            border: 1px solid #ccc;
+            padding: 10px;
+            background: #F8F8FA;
+            text-align: center;
+            border-radius: 16px;
+            height: 130px;
+            margin-top: 120px;
+                    font-weight: bold;
+        }
+
+        .box img {
+            width: 60px;
+            height: auto;
+        }
+        p {
+          font-weight: bold;
+        }
+</style>
+<body>
+   <div class="container">
+     <div class="box" onclick="next()">
+       <img src="add.png" style="width: 70px;" alt="Image 1">
+       <p style="        font-weight: bold;">Add Funds</p>
+     </div>
+     <div class="box" onclick="next1()">
+       <img src="bal.png" alt="Image 2">
+       <p>Check Balance</p>
+     </div>
+   </div>
+   <script>
+     function next() {
+       location.href = 'with.html'
+     };
+     
+     function next1() {
+       location.href = 'dat.html'
+     }
+   </script>
+</body>
+
+</html>

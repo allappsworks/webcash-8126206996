@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+<style>
+          body {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            background: #14223C;
+            width: 96%;
+            color: #FFB739;
+            margin-top: 37px;
+          }
+          .container {
+            width: 94%;
+            height: 210px;
+            border-radius: 5px;
+            background: transparent;
+            box-shadow: 1px 1px 11px 2px #000;
+            
+          }
+    /* HTML: <div class="loader"></div> */
+.loader {
+  height: 30px;
+  aspect-ratio: 2;
+  background:
+    radial-gradient(farthest-side,#000 15%,#0000 18%)0 0/50% 100%,
+    radial-gradient(50% 100% at 50% 160%,#fff 95%,#0000) 0 0   /50% 50%,
+    radial-gradient(50% 100% at 50% -60%,#fff 95%,#0000) 0 100%/50% 50%;
+  background-repeat: repeat-x;
+  -webkit-mask: radial-gradient(50% 100%,#000 95%,#0000) 0 100%/50% 0% repeat-x;
+  animation: l3 1s infinite alternate ease-in;
+}
+@keyframes l3 {
+  0%,
+  70% {-webkit-mask-size:50% 100%}
+  85% {-webkit-mask-size:50% 0}
+  100% {-webkit-mask-size:50% 100%}
+}
+.load {
+  width: 48px;
+  height: 48px;
+  display: inline-block;
+  position: relative;
+}
+.load::after,
+.load::before {
+  content: '';  
+  box-sizing: border-box;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  border: 2px solid #FFF;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  animation: animloader 2s linear infinite;
+}
+.load::after {
+  animation-delay: 1s;
+}
+
+@keyframes animloader {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+</style>
+<body>
+  <center>
+      <div class="loader"></div>
+      <br>
+<div class="container">
+  <br>
+  <p>You have <strong style="color: green;">₦3,748,884.02</strong> Available on your dashboard</p>
+  <span class="load"></span>
+
+</div>
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;1,900&display=swap');
+
+        body {
+             font-family: 'Poppins', sans-serif;
+                    background: #14223C;
+          width: 96%;
+          color: #FFB739;
+          margin-top: 37px;
+          font-weight: bold;
+        }
+        .container {
+          width: 86%;
+            text-align: center;
+        }
+        img {
+          width: 90px;
+        }
+                button {
+                  width: 56%;
+                  background: #FFB739;
+                  font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+            position: center;
+                  border: none;
+                  padding: 11px;
+                  border-radius: 10px;
+                  font-size: 15px;
+                  color: #F8F8FA;
+                  margin-top: 55px;
+                }
+    </style>
+</head>
+<body>
+  <center>
+    <div class="container">
+      <img src="veri.png" alt="veri.png">
+        <h3>Transfer Completed</h3>
+
+        <p>Your Transfer of <span id="selectFieldDisplay"></span> has been sent to
+        <span id="inputFieldDisplay"></span> You will be credited immediately</p>
+    </div>
+    <a href="in.html">
+    <button>Ok, Thanks</button>
+    </a>
+    <script>
+        // Retrieve values from localStorage
+        const inputField = localStorage.getItem('inputField');
+        const selectField = localStorage.getItem('selectField');
+        
+        document.getElementById('inputFieldDisplay').textContent = inputField;
+        document.getElementById('selectFieldDisplay').textContent = selectField;
+    </script>
+</body>
+</html>

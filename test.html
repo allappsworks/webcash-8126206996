@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copy to Clipboard</title>
+    <style>
+        .copy-icon {
+            cursor: pointer;
+            font-size: 24px;
+        }
+
+        .popup {
+            visibility: hidden;
+            background-color: #555;
+            color: #fff;
+            text-align: center;
+            border-radius: 5px;
+            padding: 8px 0;
+            position: fixed;
+            z-index: 1;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            min-width: 200px;
+            font-size: 16px;
+        }
+
+        .popup.show {
+            visibility: visible;
+            animation: fadeInOut 2s forwards;
+        }
+
+        @keyframes fadeInOut {
+            0%, 100% { opacity: 0; }
+            10%, 90% { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <span id="account-number">1234567890</span>
+        <span class="copy-icon" onclick="copyToClipboard()">📋</span>
+    </div>
+
+    <div id="popup" class="popup">Account number copied</div>
+
+    <script>
+        function copyToClipboard() {
+            var accountNumber = document.getElementById("account-number").textContent;
+            navigator.clipboard.writeText(accountNumber).then(function() {
+                var popup = document.getElementById("popup");
+                popup.classList.add("show");
+                setTimeout(function() {
+                    popup.classList.remove("show");
+                }, 2000);
+            }, function(err) {
+                console.error('Async: Could not copy text: ', err);
+            });
+        }
+    </script>
+</body>
+</html>

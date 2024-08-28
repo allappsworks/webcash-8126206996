@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;1,900&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #14223C;
+    width: 96%;
+    color: #000;
+    margin-top: 7px;
+  }
+  .container {
+    width: 92%;
+    height: 505px;
+    border-radius: 6px;
+    box-shadow: 1px 1px 14px 0px #000;
+    margin-top: 30%;
+  }
+          .form-group {
+            position: relative;
+            margin-bottom: 34px;
+            width: 300px;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+          outline: none;
+            box-sizing: border-box;
+        }
+        .form-group label {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 16px;
+            color: #aaa;
+            transition: all 0.2s ease-out;
+            pointer-events: none;
+        }
+        .form-group input:focus + label,
+        .form-group input:not(:placeholder-shown) + label {
+            top: -12px;
+            left: 8px;
+            font-size: 12px;
+            color: #333;
+            background: #fff;
+            padding: 0 5px;
+        }
+        button {
+          width: 90%;
+          background: #FFB739;
+          font-weight: bold; 
+              font-family: 'Poppins', sans-serif;
+           position: center;
+          border: none;
+          padding: 12px;
+          border-radius: 10px;
+          font-size: 18px;
+          color: #F8F8FA;
+          margin-top: 55px;
+        }
+
+        </style>
+<body>
+  <center>
+          <form id="form" onsubmit="return validateForm()">
+<div class="container">
+  <br>
+  <br>
+  <br>
+      <div class="form-group">
+        <input type="text" id="inputField" name="inputField" required placeholder=" ">
+        <label for="username">Enter Account Name</label>
+      </div>
+      <div class="form-group">
+        <input type="tel" required placeholder=" ">
+        <label for="password">Account Number</label>
+      </div>
+                      <select id="select1" name="select1" style="height: 40px; color: #000; width: 94%; border-radius: 3px;     font-family: 'Poppins', sans-serif; font-size: 14px; " required>
+                    <option value="" disabled selected>Available Banks</option>
+                    <!-- List 25 options directly in HTML -->
+                    <option value="9Payments Service Bank">9Payments Service Bank</option>
+                    <option value="Access Bank PLC">Access Bank PLC</option>
+                    <option value="ACCESSMONEY">ACCESSMONEY</option>
+                    <option value="Carbon">Carbon</option>
+                    <option value="Chase Microfinance Bank">Chase Microfinance Bank</option>
+                    <option value="CitiBank Nigeria">CitiBank Nigeria</option>
+                    <option value="E-Finance">E-Finance</option>
+                    <option value="Eyowo Microfinance Bank">Eyowo Microfinance Bank</option>
+                    <option value="EcoBank Nigeria">EcoBank Nigeria</option>
+                    <option value="eNaira(e-Naira)">eNaira(e-Naira)</option>
+                    <option value="eTransact">eTransact</option>
+                    <option value="FCMB MFB">FCMB MFB</option>
+                    <option value="First Bank Nigeria">First Bank Nigeria</option>
+                    <option value="FairMoney">FairMoney</option>
+                    <option value="Fidelity Bank PLC">Fidelity Bank PLC</option>
+                    <option value="GTBank PLC">GTBank PLC</option>
+                    <option value="Globus Bank">Globus Bank</option>
+                    <option value="GoMoney">GoMoney</option>
+                    <option value="Jaiz Bank">Jaiz Bank</option>
+                    <option value="Keystone Bank">Keystone Bank</option>
+                    <option value="Kuda MicroFianance Bank">Kuda MicroFianance Bank</option>
+                    <option value="Lotus Bank">Lotus Bank</option>
+                    <option value="MTN MoMO PSB">MTN MoMO PSB</option>
+                    <option value="MoniePoint MicroFianance Bank">MoniePoint MicroFianance Bank</option>
+                    <option value="OPTIMUS BANK">OPTIMUS BANK</option>
+                    <option value="OPAY">OPAY</option>           
+                    <option value="PARRALEX">PARRALEX</option>
+                    <option value="Paga">Paga</option>
+                    <option value="Paystack-Titan">Paystack-Titan</option>
+                    <option value="PalmPay">PalmPay</option>
+                    <option value="Polaris Bank">Polaris Bank</option>
+                    <option value="Providus Bank">Providus Bank</option>            
+                    <option value="SmartCash PSB">SmartCash PSB</option>
+                                   <option value="Sparkle">Sparkle</option>            <option value="Stanbic IBTC Bank">Stanbic IBTC Bank</option>            
+            <option value="Sterling Bank">Sterling Bank</option>            <option value="TITAN TRUST BANK">TITAN TRUST BANK</option>
+            <option value="Union Bank Of Nigeria">Union Bank Of Nigeria</option>            <option value="United Bank for Africa">United Bank for Africa</option>
+            <option value="VFD MicroFianance Bank">VFD MicroFianance Bank</option>            <option value="Wema Bank">Wema Bank</option>
+<option value="ZENITH BANK">ZENITH BANK</option>
+                </select><br><br>
+                <select style="width: 94%; background: #F8F8FA; height: 40px; border-radius: 3px; font-size: 14px;     font-family: 'Poppins', sans-serif; color: #000;" id="selectField" name="selectField" required>
+                    <option value="" disabled selected>Select Amount</option>
+                    <option value="₦50,000">₦50,000</option>
+                    <option value="₦100,000">₦100,000</option>
+                    <option value="₦500,000">₦500,000</option>
+                </select>
+                <br>
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+    </div>
+
+</div>
+    <script>
+      function validateForm() {
+        const inputField = document.getElementById('inputField').value;
+        const selectField = document.getElementById('selectField').value;
+
+        if (inputField === "" || selectField === "") {
+          alert("All fields are required!");
+          return false;
+        } else {
+          // Save the values in localStorage
+          localStorage.setItem('inputField', inputField);
+          localStorage.setItem('selectField', selectField);
+
+          // Redirect to the next page
+          window.location.href = "success.html";
+          return false; // Prevent form submission to avoid page reload
+        }
+      }
+    </script>
+</body>
+
+</html>
